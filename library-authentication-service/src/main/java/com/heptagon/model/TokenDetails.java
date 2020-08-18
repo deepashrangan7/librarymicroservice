@@ -13,8 +13,14 @@ public class TokenDetails {
 	private String name;
 	private String token;
 
-	public Long getId() {
+	
+
+	public Long getAuthorId() {
 		return authorId;
+	}
+
+	public void setAuthorId(Long authorId) {
+		this.authorId = authorId;
 	}
 
 	public String getName() {

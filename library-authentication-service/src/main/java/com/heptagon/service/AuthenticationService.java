@@ -31,7 +31,7 @@ public class AuthenticationService {
 		Author fetchedAuthor = authorAuthenticationRepository.findByEmailAndPassword(author.getEmail().trim(),
 				author.getPassword());
 		if (fetchedAuthor != null) {
-			String token = jwtService.generateToken(author.getName().trim(), "author");
+			String token = jwtService.generateToken(fetchedAuthor.getName().trim(), "author");
 			// generating the token
 			return new TokenDetails(fetchedAuthor.getAuthorId(), fetchedAuthor.getName(), token);
 		}
@@ -43,8 +43,6 @@ public class AuthenticationService {
 		// checking whether email already exist
 		if (authorAuthenticationRepository.findByEmail(author.getEmail()) != null)
 			return new Status(400, "Email already exists");
-		else if (!author.getConfirmPassword().equals(author.getPassword()))
-			return new Status(400, "Password and Confirm Password doesn't match");
 		else {
 			ResponseEntity<Author> addedAuthor = authorFeign.addAuthor(author);
 			// adding author by communicating with author service

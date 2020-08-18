@@ -1,0 +1,51 @@
+<table class="table table-hover">
+  <tbody>
+    <tr>
+      <th scope="row">AuthorId</th>
+      <td>{{ author.authorId }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Author Name</th>
+      <td>{{ author.name }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Email</th>
+      <td>{{ author.email }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Age</th>
+      <td>{{ author.age }}</td>
+    </tr>
+    <tr>
+      <th scope="row">No of books witten</th>
+      <td>{{ author.noOFBooksWritten }}</td>
+    </tr>
+
+    <tr>
+      <td>
+        <button
+          (click)="showBook(author.authorId)"
+          *ngIf="!showBookId"
+          class="btn btn-success"
+        >
+          View Books of {{ author.name }}
+        </button>
+
+        <button
+          (click)="showBook(author.authorId)"
+          *ngIf="showBookId"
+          class="btn btn-danger"
+        >
+          Close Book List
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div *ngIf="showBookId">
+  <h3>Books of {{ author.name }}</h3>
+  <br />
+
+  <app-books-of-author [authorId]="author.authorId"></app-books-of-author>
+</div>

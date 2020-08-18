@@ -16,7 +16,11 @@ public class AuthorService {
 
 	public List<Author> getAllAuthors() {
 
-		return authorRepository.findAll();
+		List<Author> authors = authorRepository.findAll();
+		authors.stream().forEach(author -> {
+			author.setNoOFBooksWritten(author.getMyBooks().size());
+		});
+		return authors;
 
 	}
 
@@ -32,8 +36,12 @@ public class AuthorService {
 	public Author getAuthor(Long authorId) {
 
 		Optional<Author> author = authorRepository.findById(authorId);
-		if (author.isPresent())
-			return author.get();
+		if (author.isPresent()) {
+
+			Author oldAuthor = author.get();
+			oldAuthor.setNoOFBooksWritten(oldAuthor.getMyBooks().size());
+			return oldAuthor;
+		}
 		return null;
 	}
 

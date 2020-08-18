@@ -1,0 +1,126 @@
+<div style="text-align: center;">
+  <h5>Your Books</h5>
+  <h4 *ngIf="!edit"><small>Click on Book Id to edit</small></h4>
+
+  <h4 *ngIf="edit"><small>Click on Book Id to cancel editing</small></h4>
+
+  <div class="alert alert-danger" *ngIf="msg">{{ msg }}</div>
+  <div class="container">
+    <!-- <app-books-of-author [authorId]="authorId"></app-books-of-author> -->
+    <table class="table table-hover">
+      <tbody>
+        <tr>
+          <th scope="row">BookId</th>
+          <th scope="row">Book Name</th>
+          <th scope="row">Book Cost</th>
+        </tr>
+        <tr *ngFor="let book of myBooks">
+          <th
+            scope="row"
+            style="cursor: pointer;"
+            (click)="editShow(book.bookId)"
+          >
+            {{ book.bookId }}
+          </th>
+
+          <th scope="row">{{ book.name }}</th>
+          <td>{{ book.cost }}</td>
+          <td>
+            <button (click)="deletebook(book.bookId)" class="btn btn-danger">
+              Delete
+            </button>
+          </td>
+          <td>
+            <div *ngIf="edit != undefined && edit == book.bookId">
+              <form>
+                <div class="form-group">
+                  <label for="book ID">Book ID</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="book ID"
+                    required
+                    disabled="true"
+                    name="id"
+                    [(ngModel)]="book.bookId"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="book name">Book Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="book name"
+                    required
+                    name="bookName"
+                    #bookName="ngModel"
+                    [(ngModel)]="name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="cost">Cost</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="cost"
+                    name="cost"
+                    #bookCost="ngModel"
+                    [(ngModel)]="cost"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  (click)="editBook(book.bookId)"
+                >
+                  Update Book
+                </button>
+              </form>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <br />
+    <button *ngIf="!add" (click)="showAddBook()" class="btn btn-warning">
+      Add new Book
+    </button>
+    <button (click)="showAddBook()" *ngIf="add" class="btn btn-danger">
+      Cancel
+    </button>
+
+    <br />
+    <div *ngIf="add">
+      <form>
+        <div class="form-group">
+          <label for="book name">Book Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="book name"
+            required
+            name="bookName"
+            #bookName="ngModel"
+            [(ngModel)]="name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="cost">Cost</label>
+          <input
+            type="number"
+            class="form-control"
+            id="cost"
+            name="cost"
+            #bookCost="ngModel"
+            [(ngModel)]="cost"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="addBook()">
+          Add Book
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

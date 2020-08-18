@@ -1,0 +1,120 @@
+package com.heptagon.service;
+
+import java.util.List;
+import java.util.Optional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import com.heptagon.feign.AuthorFeign;
+import com.heptagon.model.Author;
+import com.heptagon.model.Book;
+import com.heptagon.repository.BookRepository;
+
+@Service
+public class BookService {
+
+	@Autowired
+	private BookRepository bookRepository;
+
+	@Autowired
+	private AuthorFeign authorFeign;
+
+	public List<Book> getAllBooks() {
+
+		return bookRepository.findAll();// getting all books irrespective of author
+	}
+
+	public Book getBook(Long bookId) {
+		Optional<Book> optionalBook = bookRepository.findById(bookId);// finding book by ID
+		if (optionalBook.isPresent()) {
+			Book book = optionalBook.get();
+			return book;
+		}
+		return null;
+	}
+
+	public boolean deleteBook(Long bookId, Long authorId) {
+		// fetching the user through author service
+		// communication done using feign
+		Author author = authorFeign.getAuthor(authorId);
+		if (author != null) {
+			List<Book> authorsBooks = bookRepository.findByAuthor(author);
+			if (authorsBooks != null) {
+				// finding whether the author owns that book using bookId
+				if (authorsBooks.stream().anyMatch(book -> book.getBookId() == bookId)) {
+
+					try {
+						bookRepository.deleteById(bookId);
+						return true;
+					} catch (Exception e) {
+
+					}
+
+				}
+			}
+
+		}
+		return false;
+	}
+
+	public Book editBook(Long bookId, Book book, Long authorId) {
+		// fetching the user through author service
+		// communication done using feign
+		Author author = authorFeign.getAuthor(authorId);
+		if (author != null) {
+			// fetching the books of that author
+			List<Book> authorsBooks = bookRepository.findByAuthor(author);
+			if (authorsBooks != null) {
+				Optional<Book> optionalBook = bookRepository.findById(bookId);// fetching by ID to edit it
+				if (optionalBook.isPresent()) {
+					Book oldBook = optionalBook.get();// getting the instance of the old book
+					if (authorsBooks.contains(oldBook)) {
+						// checking whether the editing book is his book object
+						oldBook.setCost(book.getCost());
+						oldBook.setName(book.getName());
+						try {
+							return bookRepository.save(oldBook);
+						} catch (Exception e) {
+
+						}
+					}
+
+				}
+			}
+
+		}
+		return null;
+	}
+
+	public Book addBook(Long authorId, Book newBook) {
+
+		// fetching the user through author service
+		// communication done using feign
+
+		Author author = authorFeign.getAuthor(authorId);
+
+		if (author != null) {
+			// setting the author for that book
+			newBook.setAuthor(author);
+			
+			try {
+				return bookRepository.save(newBook);
+			} catch (Exception e) {
+
+			}
+		}
+
+		return null;
+	}
+
+	public List<Book> findAllBooksByAuthor(Long authorId) {
+
+		Author author = authorFeign.getAuthor(authorId);
+
+		if (author != null) {
+			// finding the books of that author
+			return bookRepository.findByAuthor(author);
+		}
+		return null;
+	}
+
+}

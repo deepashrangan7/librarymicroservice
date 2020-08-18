@@ -1,0 +1,73 @@
+package com.heptagon.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Service;
+import com.heptagon.feign.AuthorFeign;
+import com.heptagon.model.Author;
+import com.heptagon.model.Status;
+import com.heptagon.model.TokenDetails;
+import com.heptagon.repository.AuthorAuthenticationRepository;
+
+@Service
+public class AuthenticationService {
+
+	@Autowired
+	private AuthorAuthenticationRepository authorAuthenticationRepository;
+
+	@Autowired
+	private JwtService jwtService;
+
+	@Autowired
+	private AuthorFeign authorFeign;
+
+	@Autowired
+	private CustomerUserService customerUserService;
+
+	public TokenDetails validateAuthor(Author author) {
+		// finding whether given user email and password matches
+		Author fetchedAuthor = authorAuthenticationRepository.findByEmailAndPassword(author.getEmail().trim(),
+				author.getPassword());
+		if (fetchedAuthor != null) {
+			String token = jwtService.generateToken(author.getName().trim(), "author");
+			// generating the token
+			return new TokenDetails(fetchedAuthor.getAuthorId(), fetchedAuthor.getName(), token);
+		}
+		return null;
+	}
+
+	public Status createAuthor(Author author) {
+
+		// checking whether email already exist
+		if (authorAuthenticationRepository.findByEmail(author.getEmail()) != null)
+			return new Status(400, "Email already exists");
+		else {
+			ResponseEntity<Author> addedAuthor = authorFeign.addAuthor(author);
+			// adding author by communicating with author service
+			if (addedAuthor.getStatusCode() == HttpStatus.BAD_REQUEST) {
+				// checking status returned
+				return new Status(400, "Something went worng");
+			} else {
+
+				return new Status(200, "Account created succesfully");
+
+			}
+		}
+	}
+
+	public boolean validateToken(String token) {
+		if (token != null && token.startsWith("Bearer ")) {
+			token = token.substring(7).toString();
+			String username = jwtService.extractUsername(token);
+			if (username != null) {
+				UserDetails userDetails = customerUserService.loadUserByUsername(username);
+				return jwtService.validateToken(token, userDetails);
+			} else
+				return false;
+		}
+		return false;
+	}
+
+}

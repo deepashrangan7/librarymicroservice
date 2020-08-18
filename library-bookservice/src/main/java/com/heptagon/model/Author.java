@@ -50,7 +50,7 @@ public class Author {
 	private Integer age;
 
 	@OneToMany(mappedBy = "author", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	private Set<Book> myBooks;
+	private Set<Book> myBooks=new HashSet<>();
 
 	public Long getAuthorId() {
 		return authorId;
@@ -89,6 +89,10 @@ public class Author {
 		return noOFBooksWritten;
 	}
 
+	public void setNoOFBooksWritten(Integer no) {
+		this.noOFBooksWritten = no;
+	}
+
 	public Integer getAge() {
 		return age;
 	}
@@ -104,11 +108,11 @@ public class Author {
 	}
 
 	public boolean addBook(Book newBook) {
-		if (this.myBooks == null)
-			this.myBooks = new HashSet<>();
 
-		this.noOFBooksWritten = this.myBooks.size();
+		boolean flag=this.getMyBooks().add(newBook);
+		
+		this.noOFBooksWritten = this.getMyBooks().size();
 
-		return this.myBooks.add(newBook);
+		return flag;
 	}
 }

@@ -93,6 +93,7 @@ public class Author {
 	public Integer getNoOFBooksWritten() {
 		return noOFBooksWritten;
 	}
+	
 
 	public Integer getAge() {
 		return age;
@@ -123,6 +124,10 @@ public class Author {
 		this.noOFBooksWritten = this.myBooks.size();
 
 		return this.myBooks.add(newBook);
+	}
+
+	public void setNoOFBooksWritten(Integer noOFBooksWritten) {
+		this.noOFBooksWritten = noOFBooksWritten;
 	}
 
 }

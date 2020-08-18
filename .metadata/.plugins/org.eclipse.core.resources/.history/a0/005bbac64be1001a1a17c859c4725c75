@@ -1,0 +1,60 @@
+package com.heptagon.controller;
+
+import javax.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import com.heptagon.model.Author;
+import com.heptagon.model.Status;
+import com.heptagon.model.TokenDetails;
+import com.heptagon.service.AuthenticationService;
+import com.heptagon.service.JwtService;
+
+@RestController
+@RequestMapping("/authenticate")
+@CrossOrigin(origins = "*",allowedHeaders = "*",allowCredentials = "true")
+public class AuthenticationController {
+
+	@Autowired
+	private AuthenticationService authenticationService;
+
+	@Autowired
+	private JwtService jwt;
+
+	@PostMapping("/login")
+	public TokenDetails getToken(@RequestBody Author author) {
+
+		return authenticationService.validateAuthor(author);
+	}
+
+	@PostMapping("/signup")
+	public Status signup(@Valid @RequestBody Author author, BindingResult bindingResult) {
+
+		if (bindingResult.hasErrors()) {
+			// mapping errors and sending back
+			return new Status(400, bindingResult.getAllErrors().get(0).getDefaultMessage());
+		}
+		return authenticationService.createAuthor(author);
+	}
+
+	@PostMapping(value="/validate")
+	public boolean validateToken(@RequestBody String token) {
+		//validate the token and send status
+		return authenticationService.validateToken(token);
+	}
+
+	@PostMapping("/username")
+	public String getUsername(@RequestBody String token) {
+		try {
+			String name = jwt.extractUsername(token);
+			return name;
+		} catch (Exception e) {
+
+		}
+		return null;
+	}
+}

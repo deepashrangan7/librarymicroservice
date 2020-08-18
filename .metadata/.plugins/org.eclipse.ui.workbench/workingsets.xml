@@ -26,4 +26,5 @@
 <item elementID="=library-zuul-gateway/src\/test\/java=/optional=/true=/=/maven.pomderived=/true=/=/test=/true=/" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1597727871355_2" label="Window Working Set" name="Aggregate for window 1597727871354"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1597751377796_3" label="Window Working Set" name="Aggregate for window 1597751377796"/>
 </workingSetManager>
