@@ -1,0 +1,120 @@
+2020-08-18 10:47:57,977 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-08-18 10:49:49,421 [Worker-12: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.heptagon:library-authentication-service:0.0.1-SNAPSHOT @ D:\librarymicroservice\library-authentication-service\pom.xml.
+2020-08-18 10:51:00,470 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-18 10:51:00,498 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-08-18 10:51:00,604 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-08-18 10:51:00,617 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-18 10:51:00,617 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\librarymicroservice\library-authentication-service\src\test\resources
+2020-08-18 10:51:04,363 [Worker-0: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.heptagon:library-authentication-service:0.0.1-SNAPSHOT @ D:\librarymicroservice\library-authentication-service\pom.xml.
+2020-08-18 10:51:20,940 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-18 10:51:20,948 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-08-18 10:51:20,958 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-08-18 10:51:20,961 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-18 10:51:20,961 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\librarymicroservice\library-authentication-service\src\test\resources
+2020-08-18 10:51:23,769 [Worker-1: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.heptagon:authorservice:0.0.1-SNAPSHOT @ D:\librarymicroservice\library-authorservice\pom.xml.
+2020-08-18 10:51:28,515 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-18 10:51:28,515 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-08-18 10:51:28,550 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-08-18 10:51:28,553 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-18 10:51:28,553 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\librarymicroservice\library-authorservice\src\test\resources
+2020-08-18 10:51:31,694 [Worker-1: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.heptagon:bookservice:0.0.1-SNAPSHOT @ D:\librarymicroservice\library-bookservice\pom.xml.
+2020-08-18 10:51:37,753 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-18 10:51:37,753 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-08-18 10:51:37,818 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-08-18 10:51:37,822 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-18 10:51:37,822 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\librarymicroservice\library-bookservice\src\test\resources
+2020-08-18 10:51:40,478 [Worker-1: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.heptagon:library-eureka-server:0.0.1-SNAPSHOT @ D:\librarymicroservice\library-eureka-server\pom.xml.
+2020-08-18 10:52:07,494 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-18 10:52:07,495 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-08-18 10:52:07,513 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-08-18 10:52:07,517 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-18 10:52:07,517 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\librarymicroservice\library-eureka-server\src\test\resources
+2020-08-18 10:52:13,171 [Worker-1: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.heptagon:library-spring-cloud-config-server:0.0.1-SNAPSHOT @ D:\librarymicroservice\library-spring-cloud-config-server\pom.xml.
+2020-08-18 10:52:21,004 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-18 10:52:21,004 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-08-18 10:52:21,015 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-08-18 10:52:21,018 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-18 10:52:21,018 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\librarymicroservice\library-spring-cloud-config-server\src\test\resources
+2020-08-18 10:52:22,974 [Worker-2: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2020-08-18 10:52:32,822 [Worker-2: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.heptagon:library-eureka-server:0.0.1-SNAPSHOT @ D:\librarymicroservice\library-eureka-server\pom.xml.
+2020-08-18 10:52:41,763 [Worker-2: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.heptagon:library-zuul-gateway:0.0.1-SNAPSHOT @ D:\librarymicroservice\library-zuul-gateway\pom.xml.
+2020-08-18 10:52:49,092 [Worker-2: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.heptagon:authorservice:0.0.1-SNAPSHOT @ D:\librarymicroservice\library-authorservice\pom.xml.
+2020-08-18 10:52:50,860 [Worker-2: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.heptagon:library-spring-cloud-config-server:0.0.1-SNAPSHOT @ D:\librarymicroservice\library-spring-cloud-config-server\pom.xml.
+2020-08-18 10:52:51,520 [Worker-2: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.heptagon:bookservice:0.0.1-SNAPSHOT @ D:\librarymicroservice\library-bookservice\pom.xml.
+2020-08-18 10:52:52,337 [Worker-2: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.heptagon:library-authentication-service:0.0.1-SNAPSHOT @ D:\librarymicroservice\library-authentication-service\pom.xml.
+2020-08-18 10:53:08,600 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /library-authentication-service/src/main/java
+2020-08-18 10:53:08,601 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /library-authentication-service/src/main/resources
+2020-08-18 10:53:08,602 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /library-authentication-service/src/main/resources
+2020-08-18 10:53:08,603 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /library-authentication-service/src/test/java
+2020-08-18 10:53:11,408 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /library-authorservice/src/main/java
+2020-08-18 10:53:11,408 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /library-authorservice/src/main/resources
+2020-08-18 10:53:11,409 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /library-authorservice/src/main/resources
+2020-08-18 10:53:11,410 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /library-authorservice/src/test/java
+2020-08-18 10:53:14,070 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /library-bookservice/src/main/java
+2020-08-18 10:53:14,070 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /library-bookservice/src/main/resources
+2020-08-18 10:53:14,071 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /library-bookservice/src/main/resources
+2020-08-18 10:53:14,072 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /library-bookservice/src/test/java
+2020-08-18 10:53:14,878 [Worker-13: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.heptagon:library-eureka-server:0.0.1-SNAPSHOT @ D:\librarymicroservice\library-eureka-server\pom.xml.
+2020-08-18 10:53:16,895 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /library-eureka-server/src/main/java
+2020-08-18 10:53:16,896 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /library-eureka-server/src/main/resources
+2020-08-18 10:53:16,896 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /library-eureka-server/src/main/resources
+2020-08-18 10:53:16,896 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /library-eureka-server/src/test/java
+2020-08-18 10:53:18,583 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /library-spring-cloud-config-server/src/main/java
+2020-08-18 10:53:18,583 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /library-spring-cloud-config-server/src/main/resources
+2020-08-18 10:53:18,584 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /library-spring-cloud-config-server/src/main/resources
+2020-08-18 10:53:18,585 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /library-spring-cloud-config-server/src/test/java
+2020-08-18 10:53:18,945 [Worker-13: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.heptagon:library-zuul-gateway:0.0.1-SNAPSHOT @ D:\librarymicroservice\library-zuul-gateway\pom.xml.
+2020-08-18 10:53:19,503 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /library-zuul-gateway/src/main/java
+2020-08-18 10:53:19,503 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /library-zuul-gateway/src/main/resources
+2020-08-18 10:53:19,504 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /library-zuul-gateway/src/main/resources
+2020-08-18 10:53:19,504 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /library-zuul-gateway/src/test/java
+2020-08-18 10:53:20,564 [Worker-13: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.heptagon:authorservice:0.0.1-SNAPSHOT @ D:\librarymicroservice\library-authorservice\pom.xml.
+2020-08-18 10:53:21,990 [Worker-13: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.heptagon:library-spring-cloud-config-server:0.0.1-SNAPSHOT @ D:\librarymicroservice\library-spring-cloud-config-server\pom.xml.
+2020-08-18 10:53:22,704 [Worker-2: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 59 sec
+2020-08-18 10:53:22,713 [Worker-4: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2020-08-18 10:53:25,975 [Worker-4: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.heptagon:library-eureka-server:0.0.1-SNAPSHOT @ D:\librarymicroservice\library-eureka-server\pom.xml.
+2020-08-18 10:53:28,192 [Worker-4: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.heptagon:library-zuul-gateway:0.0.1-SNAPSHOT @ D:\librarymicroservice\library-zuul-gateway\pom.xml.
+2020-08-18 10:53:29,501 [Worker-4: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.heptagon:authorservice:0.0.1-SNAPSHOT @ D:\librarymicroservice\library-authorservice\pom.xml.
+2020-08-18 10:53:30,664 [Worker-4: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.heptagon:library-spring-cloud-config-server:0.0.1-SNAPSHOT @ D:\librarymicroservice\library-spring-cloud-config-server\pom.xml.
+2020-08-18 10:53:31,305 [Worker-4: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.heptagon:bookservice:0.0.1-SNAPSHOT @ D:\librarymicroservice\library-bookservice\pom.xml.
+2020-08-18 10:53:32,146 [Worker-4: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.heptagon:library-authentication-service:0.0.1-SNAPSHOT @ D:\librarymicroservice\library-authentication-service\pom.xml.
+2020-08-18 10:53:45,904 [Worker-4: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /library-authorservice/src/main/java
+2020-08-18 10:53:45,904 [Worker-4: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /library-authorservice/src/main/resources
+2020-08-18 10:53:45,905 [Worker-4: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /library-authorservice/src/main/resources
+2020-08-18 10:53:45,906 [Worker-4: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /library-authorservice/src/test/java
+2020-08-18 10:53:48,766 [Worker-4: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 26 sec
+2020-08-18 10:53:50,005 [Worker-0: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.heptagon:library-eureka-server:0.0.1-SNAPSHOT @ D:\librarymicroservice\library-eureka-server\pom.xml.
+2020-08-18 10:53:52,622 [Worker-0: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.heptagon:library-zuul-gateway:0.0.1-SNAPSHOT @ D:\librarymicroservice\library-zuul-gateway\pom.xml.
+2020-08-18 10:53:54,351 [Worker-0: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.heptagon:authorservice:0.0.1-SNAPSHOT @ D:\librarymicroservice\library-authorservice\pom.xml.
+2020-08-18 10:53:55,533 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-18 10:53:55,534 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-08-18 10:53:55,791 [Worker-0: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.heptagon:library-spring-cloud-config-server:0.0.1-SNAPSHOT @ D:\librarymicroservice\library-spring-cloud-config-server\pom.xml.
+2020-08-18 10:53:55,829 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-08-18 10:53:55,832 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-18 10:53:55,832 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\librarymicroservice\library-authentication-service\src\test\resources
+2020-08-18 10:53:56,475 [Worker-0: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.heptagon:bookservice:0.0.1-SNAPSHOT @ D:\librarymicroservice\library-bookservice\pom.xml.
+2020-08-18 10:54:04,749 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-18 10:54:04,750 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-08-18 10:54:04,886 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-08-18 10:54:04,889 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-18 10:54:04,889 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\librarymicroservice\library-authorservice\src\test\resources
+2020-08-18 10:54:08,752 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-18 10:54:08,752 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-08-18 10:54:08,830 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-08-18 10:54:08,833 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-18 10:54:08,833 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\librarymicroservice\library-bookservice\src\test\resources
+2020-08-18 10:54:12,351 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-18 10:54:12,351 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-08-18 10:54:12,355 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-08-18 10:54:12,358 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-18 10:54:12,358 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\librarymicroservice\library-eureka-server\src\test\resources
+2020-08-18 10:54:15,308 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-18 10:54:15,309 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-08-18 10:54:15,311 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-08-18 10:54:15,314 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-18 10:54:15,314 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\librarymicroservice\library-spring-cloud-config-server\src\test\resources
+2020-08-18 10:54:19,254 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-18 10:54:19,255 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-08-18 10:54:19,386 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-08-18 10:54:19,390 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-18 10:54:19,390 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\librarymicroservice\library-zuul-gateway\src\test\resources

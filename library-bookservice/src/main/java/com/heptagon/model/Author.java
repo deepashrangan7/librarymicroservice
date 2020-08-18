@@ -1,0 +1,114 @@
+package com.heptagon.model;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+@Entity
+@Table(name = "author")
+public class Author {
+
+	public Author(Long authorId, String name, String password, Integer noOFBooksWritten, Integer age,
+			Set<Book> myBooks) {
+		super();
+		this.authorId = authorId;
+		this.name = name;
+		this.password = password;
+		this.noOFBooksWritten = noOFBooksWritten;
+		this.age = age;
+		this.myBooks = myBooks;
+	}
+
+	public Author() {
+	}
+
+	public Author(String name, String password) {
+		this.name = name;
+		this.password = password;
+	}
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long authorId;
+
+	private String name;
+
+	private String password;
+
+	private Integer noOFBooksWritten;
+
+	private Integer age;
+
+	@OneToMany(mappedBy = "author", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	private Set<Book> myBooks;
+
+	public Long getAuthorId() {
+		return authorId;
+	}
+
+	public void setAuthorId(Long authorId) {
+		this.authorId = authorId;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	@JsonIgnore
+	public Set<Book> getMyBooks() {
+		return myBooks;
+	}
+
+	public void setMyBooks(Set<Book> myBooks) {
+		this.myBooks = myBooks;
+	}
+
+	public Integer getNoOFBooksWritten() {
+		return noOFBooksWritten;
+	}
+
+	public Integer getAge() {
+		return age;
+	}
+
+	public void setAge(Integer age) {
+		this.age = age;
+	}
+
+	@Override
+	public String toString() {
+		return "Author [authorId=" + authorId + ", name=" + name + ", password=" + password + ", noOFBooksWritten="
+				+ noOFBooksWritten + ", age=" + age + "]";
+	}
+
+	public boolean addBook(Book newBook) {
+		if (this.myBooks == null)
+			this.myBooks = new HashSet<>();
+
+		this.noOFBooksWritten = this.myBooks.size();
+
+		return this.myBooks.add(newBook);
+	}
+}
